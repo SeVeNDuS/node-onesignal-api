@@ -1,10 +1,13 @@
 {
 	"name": "node-opensignal-api",
 	"version": "0.0.1",
-	"description": "Simple module for using OneSignal's API in node.js",
+	"description": "OneSignal API client for node.js",
 	"keywords": ["onesignal", "gamethrive", "rest", "push", "notifications"],
 	"homepage": "https://github.com/SeVeNDuS/node-onesignal-api",
-	"author": "Daniel Rubio",
+	"author": "Daniel Rubio <sevendus@gmail.com>",
+	"maintainers": [
+    	"Daniel Rubio <sevendus@gmail.com>"
+  	],
 	"licenses": {
 		"type": "MIT",
 		"url": "https://raw.githubusercontent.com/SeVeNDuS/node-onesignal-api/master/LICENSE"
@@ -14,10 +17,10 @@
 		"url": "https://github.com/SeVeNDuS/node-onesignal-api.git"
 	},
 	"dependencies": {
-		"request": "*"
+		"request": "2.9.153"
 	},
 	"engines": {
 		"node": ">=0.10.0"
 	},
-	"main": "./onesignal"
+	"main": "./lib/client.js"
 }
