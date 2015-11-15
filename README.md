@@ -29,7 +29,7 @@ $ npm install node-opensignal-api --save
 Example: View all apps you have on onesignal:
 
 ``` js
-var onesignal = require('./lib/client');
+var onesignal = require('node-opensignal-api');
 var onesignal_client = onesignal.createClient();
 
 var userAuthKey = 'YOUR_USER_AUTH_KEY';
@@ -51,7 +51,7 @@ Server REST API get/apps (View Apps)
 View the details of all of your current OneSignal apps
 
 ``` js
-var onesignal = require('./lib/client');
+var onesignal = require('node-opensignal-api');
 var onesignal_client = onesignal.createClient();
 
 var userAuthKey = 'YOUR_USER_AUTH_KEY';
@@ -69,7 +69,7 @@ Server REST API get/apps/:id (View an app)
 View the details of a single OneSignal app
 
 ``` js
-var onesignal = require('./lib/client');
+var onesignal = require('node-opensignal-api');
 var onesignal_client = onesignal.createClient();
 
 var userAuthKey = 'YOUR_USER_AUTH_KEY';
@@ -88,7 +88,7 @@ Server REST API post/apps (Create an app)
 Create a new OneSignal app
 
 ``` js
-var onesignal = require('./lib/client');
+var onesignal = require('node-opensignal-api');
 var onesignal_client = onesignal.createClient();
 
 var userAuthKey = 'YOUR_USER_AUTH_KEY';
@@ -114,7 +114,7 @@ onesignal_client.apps.create(userAuthKey, apns_env, apns_p12, apns_p12_password,
 Server REST API put/apps/:id (Update an app)
 
 ``` js
-var onesignal = require('./lib/client');
+var onesignal = require('node-opensignal-api');
 var onesignal_client = onesignal.createClient();
 
 var userAuthKey = 'YOUR_USER_AUTH_KEY';
@@ -138,7 +138,7 @@ onesignal_client.apps.create(userAuthKey, app_id, name, apns_p12, apns_env, gcm_
 Server REST API get/players (View devices)
 
 ``` js
-var onesignal = require('./lib/client');
+var onesignal = require('node-opensignal-api');
 var onesignal_client = onesignal.createClient();
 
 var appAuthKey = 'YOUR_APP_AUTH_KEY';
@@ -158,7 +158,7 @@ onesignal_client.players.viewall(appAuthKey, params, function (err, response) {
 Server REST API get/players/:id (View device)
 
 ``` js
-var onesignal = require('./lib/client');
+var onesignal = require('node-opensignal-api');
 var onesignal_client = onesignal.createClient();
 
 onesignal_client.players.view(player_id, function (err, response) {
@@ -174,7 +174,7 @@ onesignal_client.players.view(player_id, function (err, response) {
 Server REST API post/players (Add a device)
 
 ``` js
-var onesignal = require('./lib/client');
+var onesignal = require('node-opensignal-api');
 var onesignal_client = onesignal.createClient();
 
 var params = {
@@ -195,7 +195,7 @@ Server REST API put/players/:id (Edit device)
 Edit an existing device in OneSignal.
 
 ``` js
-var onesignal = require('./lib/client');
+var onesignal = require('node-opensignal-api');
 var onesignal_client = onesignal.createClient();
 
 var player_id = 'YOUR_ONESIGNAL_PLAYER_ID';
@@ -214,7 +214,7 @@ Server REST API post/players/:id/on_session
 Call on new device session in your app
 
 ``` js
-var onesignal = require('./lib/client');
+var onesignal = require('node-opensignal-api');
 var onesignal_client = onesignal.createClient();
 
 var player_id = 'YOUR_ONESIGNAL_PLAYER_ID';
@@ -233,7 +233,7 @@ Server REST API post/players/:id/on_purchase
 Track a new purchase
 
 ``` js
-var onesignal = require('./lib/client');
+var onesignal = require('node-opensignal-api');
 var onesignal_client = onesignal.createClient();
 
 var player_id = 'YOUR_ONESIGNAL_PLAYER_ID';
@@ -258,7 +258,7 @@ Server REST API post/players/:id/on_focus
 Increment the device's total session length
 
 ``` js
-var onesignal = require('./lib/client');
+var onesignal = require('node-opensignal-api');
 var onesignal_client = onesignal.createClient();
 
 var player_id = 'YOUR_ONESIGNAL_PLAYER_ID';
@@ -279,7 +279,7 @@ onesignal_client.players.on_focus(player_id, params, function (err, response) {
 Server REST API post/players/csv_export
 
 ``` js
-var onesignal = require('./lib/client');
+var onesignal = require('node-opensignal-api');
 var onesignal_client = onesignal.createClient();
 
 var appAuthKey = 'YOUR_APP_AUTH_KEY';
@@ -300,7 +300,7 @@ onesignal_client.players.csv_export(appAuthKey, app_id, function (err, response)
 Server REST API get/notifications (View notifications)
 
 ``` js
-var onesignal = require('./lib/client');
+var onesignal = require('node-opensignal-api');
 var onesignal_client = onesignal.createClient();
 
 var appAuthKey = 'YOUR_APP_AUTH_KEY';
@@ -321,7 +321,7 @@ Server REST API get/notifications/:id (View notification)
 View the details of a notification
 
 ``` js
-var onesignal = require('./lib/client');
+var onesignal = require('node-opensignal-api');
 var onesignal_client = onesignal.createClient();
 
 var appAuthKey = 'YOUR_APP_AUTH_KEY';
@@ -340,7 +340,7 @@ onesignal_client.notifications.view(appAuthKey, notification_id, app_id, functio
 Server REST API put/notifications/:id (Track open)
 
 ``` js
-var onesignal = require('./lib/client');
+var onesignal = require('node-opensignal-api');
 var onesignal_client = onesignal.createClient();
 
 var notification_id = 'YOUR_ONESIGNAL_NOTIFICATION_ID';
@@ -359,7 +359,7 @@ onesignal_client.notifications.track(notification_id, app_id, opened, function (
 Server REST API post/notifications (Create Notification)
 
 ``` js
-var onesignal = require('./lib/client');
+var onesignal = require('node-opensignal-api');
 var onesignal_client = onesignal.createClient();
 
 var restApiKey = 'YOUR_APP_REST_API_KEY';
@@ -385,7 +385,7 @@ Server REST API delete/notifications/:id (Cancel notification)
 Stop a scheduled or currently outgoing notification.
 
 ``` js
-var onesignal = require('./lib/client');
+var onesignal = require('node-opensignal-api');
 var onesignal_client = onesignal.createClient();
 
 var appAuthKey = 'YOUR_APP_AUTH_KEY';
