@@ -1,6 +1,6 @@
 {
 	"name": "node-opensignal-api",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "OneSignal API client for node.js",
 	"keywords": ["onesignal", "gamethrive", "rest", "push", "notifications"],
 	"homepage": "https://github.com/SeVeNDuS/node-onesignal-api",
